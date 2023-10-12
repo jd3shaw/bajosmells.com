@@ -1,26 +1,35 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="app">
+    <PhotoGallery imageSrc="bajosmells.jpg" />
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import PhotoGallery from './components/PhotoGallery.vue';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
-  }
-}
+    PhotoGallery,
+  },
+};
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+<style scoped>
+.app {
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  background-color: black;
+  color: white;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
+
+h1 {
+  font-size: 24px;
+}
+
+/* Additional styles can be added as needed */
 </style>
