@@ -1,35 +1,86 @@
 <template>
   <div class="app">
-    <PhotoGallery imageSrc="bajosmells.jpg" />
+    <div @click="playVideo" class="background">
+      <img src="bajosmells.jpg" alt="Background Image" />
+    </div>
+    <video v-if="showVideo" autoplay @ended="stopVideo" ref="videoElement">
+      <source src="bajosmells.mp4" type="video/mp4" />
+    </video>
+    <div class="twitch-link">
+      <a href="https://www.twitch.tv/bajo" target="_blank">Visit Bajo's Twitch Channel</a>
+    </div>
   </div>
 </template>
 
 <script>
-import PhotoGallery from './components/PhotoGallery.vue';
-
 export default {
-  name: 'App',
-  components: {
-    PhotoGallery,
+  data() {
+    return {
+      showVideo: false,
+    };
+  },
+  methods: {
+    playVideo() {
+      this.showVideo = true;
+      const video = this.$refs.videoElement;
+      if (video) {
+        video.play();
+      }
+    },
+    stopVideo() {
+      this.showVideo = false;
+      const video = this.$refs.videoElement;
+      if (video) {
+        video.pause();
+        video.currentTime = 0;
+      }
+    },
   },
 };
 </script>
 
 <style scoped>
 .app {
-  text-align: center;
-  background-color: black;
-  color: white;
+  width: 100vw;
   height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  overflow: hidden;
+  position: relative;
 }
 
-h1 {
-  font-size: 24px;
+.background {
+  width: 100%;
+  height: 100%;
+  position: relative;
 }
 
-/* Additional styles can be added as needed */
+img {
+  width: auto;
+  max-height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+video {
+  width: 85%;
+  max-height: 85vh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.twitch-link {
+  position: absolute;
+  bottom: 20px; /* Adjust the distance from the bottom as needed */
+  width: 100%;
+  text-align: center;
+}
+
+.twitch-link a {
+  color: black;
+  text-decoration: underline;
+  cursor: pointer;
+}
 </style>
