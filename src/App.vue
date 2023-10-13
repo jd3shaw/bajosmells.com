@@ -43,19 +43,22 @@ export default {
 .app {
   width: 100vw;
   height: 100vh;
-  overflow: hidden;
   position: relative;
+  margin: 0;
+  padding: 0;
 }
 
 .background {
   width: 100%;
   height: 100%;
-  position: relative;
+  position: absolute;
+  overflow: hidden;
 }
 
 img {
-  width: auto;
+  max-width: 100%;
   max-height: 100%;
+  object-fit: contain;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -63,8 +66,8 @@ img {
 }
 
 video {
-  width: 85%;
-  max-height: 85vh;
+  max-width: 90%;
+  max-height: 90%;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -73,7 +76,7 @@ video {
 
 .twitch-link {
   position: absolute;
-  bottom: 20px; /* Adjust the distance from the bottom as needed */
+  bottom: 20px;
   width: 100%;
   text-align: center;
 }
