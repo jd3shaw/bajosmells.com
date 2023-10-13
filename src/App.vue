@@ -1,35 +1,89 @@
 <template>
   <div class="app">
-    <PhotoGallery imageSrc="bajosmells.jpg" />
+    <div @click="playVideo" class="background">
+      <img src="bajosmells.jpg" alt="Background Image" />
+    </div>
+    <video v-if="showVideo" autoplay @ended="stopVideo" ref="videoElement">
+      <source src="bajosmells.mp4" type="video/mp4" />
+    </video>
+    <div class="twitch-link">
+      <a href="https://www.twitch.tv/bajo" target="_blank">Visit Bajo's Twitch Channel</a>
+    </div>
   </div>
 </template>
 
 <script>
-import PhotoGallery from './components/PhotoGallery.vue';
-
 export default {
-  name: 'App',
-  components: {
-    PhotoGallery,
+  data() {
+    return {
+      showVideo: false,
+    };
+  },
+  methods: {
+    playVideo() {
+      this.showVideo = true;
+      const video = this.$refs.videoElement;
+      if (video) {
+        video.play();
+      }
+    },
+    stopVideo() {
+      this.showVideo = false;
+      const video = this.$refs.videoElement;
+      if (video) {
+        video.pause();
+        video.currentTime = 0;
+      }
+    },
   },
 };
 </script>
 
 <style scoped>
 .app {
-  text-align: center;
-  background-color: black;
-  color: white;
+  width: 100vw;
   height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  position: relative;
+  margin: 0;
+  padding: 0;
 }
 
-h1 {
-  font-size: 24px;
+.background {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
 }
 
-/* Additional styles can be added as needed */
+img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+video {
+  max-width: 90%;
+  max-height: 90%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.twitch-link {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+.twitch-link a {
+  color: black;
+  text-decoration: underline;
+  cursor: pointer;
+}
 </style>
