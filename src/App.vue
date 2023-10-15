@@ -10,7 +10,7 @@
       <source src="bajosmells.mp4" type="video/mp4" />
     </video>
     <div class="twitch-link">
-      <a class="twitch-link click-text larger-text" href="https://www.twitch.tv/bajo" target="_blank">Visit Bajo's Twitch Channel</a>
+      <a href="https://www.twitch.tv/bajo" target="_blank">Visit Bajo's Twitch Channel</a>
     </div>
   </div>
 </template>
@@ -79,9 +79,6 @@ img {
   z-index: 2; /* Set a high z-index to ensure it appears on top of everything else */
   pointer-events: none;
 }
-.larger-text {
-  font-size: 32px; /* Larger font size */
-}
 
 video {
   max-width: 90%;
@@ -98,5 +95,10 @@ video {
   bottom: 30px;
   width: 100%;
   text-align: center;
+  background: black;
+  color: white;
+  font-size: 32px;
+  display: inline-block;
+  z-index: 1;
 }
 </style>
