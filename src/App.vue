@@ -16,8 +16,6 @@
 </template>
 
 <script>
-import ClickText from './ClickText.vue';
-
 export default {
   data() {
     return {
@@ -40,9 +38,6 @@ export default {
         video.currentTime = 0;
       }
     },
-  },
-  components: {
-    ClickText, // Register the simplified ClickText component
   },
 };
 </script>
