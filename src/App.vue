@@ -72,7 +72,7 @@ img {
   top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: black;
+  background: rgba(0, 0, 0, 0.7);
   color: white;
   padding: 5px 5px;
   font-size: 12px;
@@ -95,7 +95,7 @@ video {
   bottom: 0px;
   width: 100%;
   text-align: center;
-  background: black;
+  background: rgba(0, 0, 0, 0.7);
   color: white;
   font-size: 32px;
   display: inline-block;
