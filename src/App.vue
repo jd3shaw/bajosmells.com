@@ -3,15 +3,15 @@
     <div @click="playVideo" class="background">
       <img src="bajosmells.jpg" alt="Background Image" />
     </div>
+    <div class="click-text" @click="handleClick">
+      Click
+    </div>
     <video v-if="showVideo" autoplay @ended="stopVideo" ref="videoElement">
       <source src="bajosmells.mp4" type="video/mp4" />
     </video>
     <div class="twitch-link">
       <a href="https://www.twitch.tv/bajo" target="_blank">Visit Bajo's Twitch Channel</a>
     </div>
-
-    <!-- Include the simplified ClickText component here -->
-    <ClickText />
   </div>
 </template>
 
@@ -72,6 +72,18 @@ img {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+.click-text {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: black;
+  color: white;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 24px;
+  z-index: 9999; /* Set a high z-index to ensure it appears on top of everything else */
+}
 
 video {
   max-width: 90%;
@@ -93,5 +105,6 @@ video {
   color: black;
   text-decoration: underline;
   cursor: pointer;
+  font-size: 24px;
 }
 </style>
