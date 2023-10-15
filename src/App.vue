@@ -3,11 +3,14 @@
     <div @click="playVideo" class="background">
       <img src="bajosmells.jpg" alt="Background Image" />
     </div>
+    <div class="click-text" @click="handleClick">
+      Clickies
+    </div>
     <video v-if="showVideo" autoplay @ended="stopVideo" ref="videoElement">
       <source src="bajosmells.mp4" type="video/mp4" />
     </video>
-    <div class="twitch-link">
-      <a href="https://www.twitch.tv/bajo" target="_blank">Visit Bajo's Twitch Channel</a>
+    <div>
+      <a class="twitch-link" href="https://www.twitch.tv/bajo" target="_blank">Visit Bajo's Twitch Channel</a>
     </div>
   </div>
 </template>
@@ -64,26 +67,44 @@ img {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+.click-text {
+  position: fixed;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 5px 5px;
+  font-size: 12px;
+  z-index: 2; /* Set a high z-index to ensure it appears on top of everything else */
+  pointer-events: none;
+}
 
 video {
   max-width: 90%;
   max-height: 90%;
   position: absolute;
-  top: 50%;
+  top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
+  z-index: 4;
 }
 
 .twitch-link {
   position: absolute;
-  bottom: 20px;
+  bottom: 0px;
   width: 100%;
   text-align: center;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  font-size: 32px;
+  display: inline-block;
+  text-decoration: none;
+  padding: 10px 20px;
+  z-index: 1;
 }
-
-.twitch-link a {
-  color: black;
-  text-decoration: underline;
-  cursor: pointer;
+.twitch-link:hover {
+  text-decoration: none;
+  color: white;
 }
 </style>
