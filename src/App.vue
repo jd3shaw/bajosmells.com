@@ -74,10 +74,10 @@ img {
   transform: translate(-50%, -50%);
   background: black;
   color: white;
-  padding: 10px 20px;
+  padding: 5px 5px;
   cursor: pointer;
   font-size: 24px;
-  z-index: 9999; /* Set a high z-index to ensure it appears on top of everything else */
+  z-index: 2; /* Set a high z-index to ensure it appears on top of everything else */
 }
 
 video {
@@ -87,11 +87,12 @@ video {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  z-index: 4;
 }
 
 .twitch-link {
   position: absolute;
-  bottom: 20px;
+  bottom: 30px;
   width: 100%;
   text-align: center;
 }
@@ -100,6 +101,7 @@ video {
   color: black;
   text-decoration: underline;
   cursor: pointer;
-  font-size: 24px;
+  font-size: 32px;
+  z-index: 1;
 }
 </style>
