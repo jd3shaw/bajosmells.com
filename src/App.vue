@@ -76,7 +76,7 @@ img {
   color: white;
   padding: 5px 5px;
   cursor: pointer;
-  font-size: 24px;
+  font-size: 12px;
   z-index: 2; /* Set a high z-index to ensure it appears on top of everything else */
 }
 
