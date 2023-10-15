@@ -9,8 +9,8 @@
     <video v-if="showVideo" autoplay @ended="stopVideo" ref="videoElement">
       <source src="bajosmells.mp4" type="video/mp4" />
     </video>
-    <div class="twitch-link">
-      <a href="https://www.twitch.tv/bajo" target="_blank">Visit Bajo's Twitch Channel</a>
+    <div>
+      <a class="twitch-link" href="https://www.twitch.tv/bajo" target="_blank">Visit Bajo's Twitch Channel</a>
     </div>
   </div>
 </template>
@@ -101,5 +101,9 @@ video {
   display: inline-block;
   padding: 10px 20px;
   z-index: 1;
+}
+.twitch-link:hover {
+  text-decoration: none;
+  color: white;
 }
 </style>
