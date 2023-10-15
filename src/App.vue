@@ -6,7 +6,7 @@
     <div class="click-text" @click="handleClick">
       Clickies
     </div>
-    <video v-if="showVideo" autoplay @ended="stopVideo" ref="videoElement">
+    <video v-if="showVideo" autoplay @ended="stopVideo" ref="videoElement" class="video-element">
       <source src="bajosmells.mp4" type="video/mp4" />
     </video>
     <div>
@@ -20,11 +20,13 @@ export default {
   data() {
     return {
       showVideo: false,
+      videoPlaying: false,
     };
   },
   methods: {
     playVideo() {
       this.showVideo = true;
+      this.videoPlaying = true;
       const video = this.$refs.videoElement;
       if (video) {
         video.play();
@@ -32,10 +34,22 @@ export default {
     },
     stopVideo() {
       this.showVideo = false;
+      this.videoPlaying = false;
       const video = this.$refs.videoElement;
       if (video) {
         video.pause();
         video.currentTime = 0;
+      }
+    },
+    toggleVideoPlay() {
+      const video = this.$refs.videoElement;
+      if (video) {
+        if (this.videoPlaying) {
+          video.pause();
+        } else {
+          video.play();
+        }
+        this.videoPlaying = !this.videoPlaying;
       }
     },
   },
@@ -99,6 +113,7 @@ video {
   color: white;
   font-size: 32px;
   display: inline-block;
+  text-decoration: none;
   padding: 10px 20px;
   z-index: 1;
 }
