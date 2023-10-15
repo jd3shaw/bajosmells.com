@@ -92,13 +92,14 @@ video {
 
 .twitch-link {
   position: absolute;
-  bottom: 30px;
+  bottom: 0px;
   width: 100%;
   text-align: center;
   background: black;
   color: white;
   font-size: 32px;
   display: inline-block;
+  padding: 10px 20px;
   z-index: 1;
 }
 </style>
