@@ -10,7 +10,7 @@
       <source src="bajosmells.mp4" type="video/mp4" />
     </video>
     <div class="twitch-link">
-      <a class="click-text larger-text" href="https://www.twitch.tv/bajo" target="_blank">Visit Bajo's Twitch Channel</a>
+      <a class="twitch-link click-text larger-text" href="https://www.twitch.tv/bajo" target="_blank">Visit Bajo's Twitch Channel</a>
     </div>
   </div>
 </template>
