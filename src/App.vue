@@ -6,7 +6,7 @@
     <div class="click-text" @click="handleClick">
       Clickies
     </div>
-    <video v-if="showVideo" autoplay @ended="stopVideo" ref="videoElement" class="video-element">
+    <video v-if="showVideo" autoplay @ended="stopVideo" ref="videoElement">
       <source src="bajosmells.mp4" type="video/mp4" />
     </video>
     <div>
