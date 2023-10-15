@@ -9,10 +9,15 @@
     <div class="twitch-link">
       <a href="https://www.twitch.tv/bajo" target="_blank">Visit Bajo's Twitch Channel</a>
     </div>
+
+    <!-- Include the simplified ClickText component here -->
+    <ClickText />
   </div>
 </template>
 
 <script>
+import ClickText from './ClickText.vue';
+
 export default {
   data() {
     return {
@@ -35,6 +40,9 @@ export default {
         video.currentTime = 0;
       }
     },
+  },
+  components: {
+    ClickText, // Register the simplified ClickText component
   },
 };
 </script>
