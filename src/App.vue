@@ -4,7 +4,7 @@
       <img src="bajosmells.jpg" alt="Background Image" />
     </div>
     <div class="click-text" @click="handleClick">
-      Click
+      Clickies
     </div>
     <video v-if="showVideo" autoplay @ended="stopVideo" ref="videoElement">
       <source src="bajosmells.mp4" type="video/mp4" />
