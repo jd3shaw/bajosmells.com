@@ -1,5 +1,8 @@
 <template>
   <div class="app">
+    <div>
+      <a class="form" href="https://forms.gle/FV1nwewC7VyRKzf58" target="_blank">BajoSmells Shirts ROI</a>
+    </div>
     <div @click="playVideo" class="background">
       <img src="bajosmells.jpg" alt="Background Image" />
     </div>
@@ -82,12 +85,29 @@ img {
 
 video {
   max-width: 90%;
-  max-height: 90%;
+  max-height: 80%;
   position: absolute;
-  top: 45%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 4;
+}
+
+.form {
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  font-size: 32px;
+  display: inline-block;
+  text-decoration: none;
+  padding: 10px 20px;
+  z-index: 1;
+}
+.form:hover {
+  color: white;
 }
 
 .twitch-link {
@@ -104,7 +124,6 @@ video {
   z-index: 1;
 }
 .twitch-link:hover {
-  text-decoration: none;
   color: white;
 }
 </style>
