@@ -26,17 +26,20 @@ export default {
       showVideo: false,
     };
   },
+  mounted() {
+    // Add click event listener to the entire document
+    document.addEventListener('click', this.togglePlayPause);
+  },
+  beforeDestroy() {
+    // Remove click event listener from the document
+    document.removeEventListener('click', this.togglePlayPause);
+  },
   methods: {
     playVideo() {
       this.showVideo = true;
       const video = this.$refs.videoElement;
       if (video) {
         video.play();
-      }
-      // Add click event listener to the background
-      const background = this.$refs.backgroundElement;
-      if (background) {
-        background.addEventListener('click', this.togglePlayPause);
       }
     },
     stopVideo() {
@@ -45,11 +48,6 @@ export default {
       if (video) {
         video.pause();
         video.currentTime = 0;
-      }
-      // Remove click event listener from the background
-      const background = this.$refs.backgroundElement;
-      if (background) {
-        background.removeEventListener('click', this.togglePlayPause);
       }
     },
     togglePlayPause() {
