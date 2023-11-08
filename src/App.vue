@@ -3,7 +3,7 @@
     <div>
       <a class="form" href="https://forms.gle/FV1nwewC7VyRKzf58" target="_blank">BajoSmells Shirts ROI</a>
     </div>
-    <div @click="playVideo" class="background">
+    <div @click="playVideo" class="background" ref="backgroundElement">
       <img src="bajosmells1.jpeg" alt="Background Image 1" style="width: 50%;" />
       <img src="bajosmells2.jpeg" alt="Background Image 2" style="width: 50%;" />
     </div>
@@ -32,8 +32,11 @@ export default {
       const video = this.$refs.videoElement;
       if (video) {
         video.play();
-        // Add click event listener to toggle play/pause
-        video.addEventListener('click', this.togglePlayPause);
+      }
+      // Add click event listener to the background
+      const background = this.$refs.backgroundElement;
+      if (background) {
+        background.addEventListener('click', this.togglePlayPause);
       }
     },
     stopVideo() {
@@ -42,8 +45,11 @@ export default {
       if (video) {
         video.pause();
         video.currentTime = 0;
-        // Remove click event listener when video is stopped
-        video.removeEventListener('click', this.togglePlayPause);
+      }
+      // Remove click event listener from the background
+      const background = this.$refs.backgroundElement;
+      if (background) {
+        background.removeEventListener('click', this.togglePlayPause);
       }
     },
     togglePlayPause() {
