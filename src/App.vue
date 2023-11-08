@@ -30,7 +30,7 @@ export default {
     // Add click event listener to the entire document
     document.addEventListener('click', this.togglePlayPause);
   },
-  beforeDestroy() {
+  beforeUnmount() { // Use beforeUnmount instead of beforeDestroy
     // Remove click event listener from the document
     document.removeEventListener('click', this.togglePlayPause);
   },
