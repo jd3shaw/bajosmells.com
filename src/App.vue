@@ -1,7 +1,8 @@
 <template>
   <div class="app">
     <div @click="playVideo" class="background">
-      <img src="bajosmells.jpg" alt="Background Image" />
+      <img src="bajosmells1.jpeg" alt="Background Image 1" style="width: 50%;" />
+      <img src="bajosmells2.jpeg" alt="Background Image 2" style="width: 50%;" />
     </div>
     <div class="click-text" @click="handleClick">
       Clickies
