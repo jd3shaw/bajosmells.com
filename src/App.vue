@@ -3,8 +3,9 @@
     <div>
       <a class="form" href="https://forms.gle/FV1nwewC7VyRKzf58" target="_blank">BajoSmells Shirts ROI</a>
     </div>
-    <div @click="playVideo" class="background">
-      <img src="bajosmells.jpg" alt="Background Image" />
+    <div @click="playVideo" class="background" ref="backgroundElement">
+      <img src="bajosmells1.jpeg" alt="Background Image 1" style="width: 50%;" />
+      <img src="bajosmells2.jpeg" alt="Background Image 2" style="width: 50%;" />
     </div>
     <div class="click-text" @click="handleClick">
       Clickies
@@ -19,6 +20,55 @@
 </template>
 
 <script>
+export default {
+  data() {
+    return {
+      showVideo: false,
+    };
+  },
+  mounted() {
+    // Add click event listener to the entire document
+    document.addEventListener('click', this.togglePlayPause);
+  },
+  beforeUnmount() { // Use beforeUnmount instead of beforeDestroy
+    // Remove click event listener from the document
+    document.removeEventListener('click', this.togglePlayPause);
+  },
+  methods: {
+    playVideo() {
+      this.showVideo = true;
+      const video = this.$refs.videoElement;
+      if (video) {
+        video.play();
+      }
+    },
+    stopVideo() {
+      this.showVideo = false;
+      const video = this.$refs.videoElement;
+      if (video) {
+        video.pause();
+        video.currentTime = 0;
+      }
+    },
+    togglePlayPause() {
+      const video = this.$refs.videoElement;
+      if (video) {
+        if (video.paused) {
+          if (video.ended) {
+            this.stopVideo();
+          } else {
+            video.play();
+          }
+        } else {
+          video.pause();
+        }
+      }
+    },
+  },
+};
+</script>
+
+<!-- <script>
 export default {
   data() {
     return {
@@ -43,7 +93,7 @@ export default {
     },
   },
 };
-</script>
+</script> -->
 
 <style scoped>
 .app {
@@ -59,16 +109,13 @@ export default {
   height: 100%;
   position: absolute;
   overflow: hidden;
+  display: flex;
 }
 
 img {
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 .click-text {
   position: fixed;
