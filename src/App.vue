@@ -56,7 +56,11 @@ export default {
       const video = this.$refs.videoElement;
       if (video) {
         if (video.paused) {
-          video.play();
+          if (video.ended) {
+            this.stopVideo();
+          } else {
+            video.play();
+          }
         } else {
           video.pause();
         }
