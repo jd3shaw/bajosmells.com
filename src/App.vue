@@ -60,16 +60,17 @@ export default {
   height: 100%;
   position: absolute;
   overflow: hidden;
+  display: flex;
 }
 
 img {
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
-  position: absolute;
+  /* position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); */
 }
 .click-text {
   position: fixed;
