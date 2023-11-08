@@ -32,6 +32,47 @@ export default {
       const video = this.$refs.videoElement;
       if (video) {
         video.play();
+        // Add click event listener to toggle play/pause
+        video.addEventListener('click', this.togglePlayPause);
+      }
+    },
+    stopVideo() {
+      this.showVideo = false;
+      const video = this.$refs.videoElement;
+      if (video) {
+        video.pause();
+        video.currentTime = 0;
+        // Remove click event listener when video is stopped
+        video.removeEventListener('click', this.togglePlayPause);
+      }
+    },
+    togglePlayPause() {
+      const video = this.$refs.videoElement;
+      if (video) {
+        if (video.paused) {
+          video.play();
+        } else {
+          video.pause();
+        }
+      }
+    },
+  },
+};
+</script>
+
+<!-- <script>
+export default {
+  data() {
+    return {
+      showVideo: false,
+    };
+  },
+  methods: {
+    playVideo() {
+      this.showVideo = true;
+      const video = this.$refs.videoElement;
+      if (video) {
+        video.play();
       }
     },
     stopVideo() {
@@ -44,7 +85,7 @@ export default {
     },
   },
 };
-</script>
+</script> -->
 
 <style scoped>
 .app {
