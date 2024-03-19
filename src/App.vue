@@ -7,7 +7,9 @@
       <img src="bajosmells1.jpeg" alt="Background Image 1" style="width: 50%;" />
       <img src="bajosmells2.jpeg" alt="Background Image 2" style="width: 50%;" />
     </div>
-    <img class="middle-img" src="bajosmells3.jpeg" alt="Background Image 3" />
+    <div>
+      <img class="middle-img" src="bajosmells3.jpeg" alt="Background Image 3" />
+    </div>
     <div class="click-text" @click="handleClick">
       Clickies
     </div>
