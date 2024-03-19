@@ -5,7 +5,7 @@
     </div>
     <div @click="playVideo" class="background" ref="backgroundElement">
       <img src="bajosmells1.jpeg" alt="Background Image 1" style="width: 50%;" />
-      <img src="bajosmells3.jpeg" alt="Background Image 3" style="width: 50%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 2;" />
+      <img class="middle-img" src="bajosmells3.jpeg" alt="Background Image 3" />
       <img src="bajosmells2.jpeg" alt="Background Image 2" style="width: 50%;" />
     </div>
     <div class="click-text" @click="handleClick">
@@ -69,33 +69,6 @@ export default {
 };
 </script>
 
-<!-- <script>
-export default {
-  data() {
-    return {
-      showVideo: false,
-    };
-  },
-  methods: {
-    playVideo() {
-      this.showVideo = true;
-      const video = this.$refs.videoElement;
-      if (video) {
-        video.play();
-      }
-    },
-    stopVideo() {
-      this.showVideo = false;
-      const video = this.$refs.videoElement;
-      if (video) {
-        video.pause();
-        video.currentTime = 0;
-      }
-    },
-  },
-};
-</script> -->
-
 <style scoped>
 .app {
   width: 100vw;
@@ -112,6 +85,18 @@ export default {
   overflow: hidden;
   display: flex;
 }
+
+.middle-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  /* Add width and height as needed */
+  width: 50%;
+  height: auto;
+}
+
 
 img {
   max-width: 100%;
