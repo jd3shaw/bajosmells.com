@@ -78,14 +78,6 @@ export default {
   padding: 0;
 }
 
-.background {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  overflow: hidden;
-  display: flex;
-}
-
 .middle-img {
   position: absolute;
   top: 50%;
@@ -97,6 +89,13 @@ export default {
   height: auto;
 }
 
+.background {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+  display: flex;
+}
 
 img {
   max-width: 100%;
