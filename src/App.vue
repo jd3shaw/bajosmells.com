@@ -7,6 +7,9 @@
       <img src="bajosmells1.jpeg" alt="Background Image 1" style="width: 50%;" />
       <img src="bajosmells2.jpeg" alt="Background Image 2" style="width: 50%;" />
     </div>
+    <div>
+      <img class="middle-img" src="bajosmells3.jpeg" alt="Background Image 3" />
+    </div>
     <div class="click-text" @click="handleClick">
       Clickies
     </div>
@@ -68,40 +71,25 @@ export default {
 };
 </script>
 
-<!-- <script>
-export default {
-  data() {
-    return {
-      showVideo: false,
-    };
-  },
-  methods: {
-    playVideo() {
-      this.showVideo = true;
-      const video = this.$refs.videoElement;
-      if (video) {
-        video.play();
-      }
-    },
-    stopVideo() {
-      this.showVideo = false;
-      const video = this.$refs.videoElement;
-      if (video) {
-        video.pause();
-        video.currentTime = 0;
-      }
-    },
-  },
-};
-</script> -->
-
 <style scoped>
 .app {
-  width: 100vw;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: space-between; */
   height: 100vh;
-  position: relative;
-  margin: 0;
+  width: 100vw;
   padding: 0;
+}
+
+.middle-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 25%; /* Half the size of the other images */
+  height: auto;
+  transform: translate(-50%, -50%);
+  z-index: 2; /* Higher than the z-index of the other images */
+  pointer-events: none;
 }
 
 .background {
@@ -126,7 +114,7 @@ img {
   color: white;
   padding: 5px 5px;
   font-size: 12px;
-  z-index: 2; /* Set a high z-index to ensure it appears on top of everything else */
+  z-index: 3; /* Set a high z-index to ensure it appears on top of everything else */
   pointer-events: none;
 }
 
@@ -151,7 +139,7 @@ video {
   display: inline-block;
   text-decoration: none;
   padding: 10px 20px;
-  z-index: 1;
+  z-index: 2;
 }
 .form:hover {
   color: white;
@@ -168,7 +156,7 @@ video {
   display: inline-block;
   text-decoration: none;
   padding: 10px 20px;
-  z-index: 1;
+  z-index: 2;
 }
 .twitch-link:hover {
   color: white;
