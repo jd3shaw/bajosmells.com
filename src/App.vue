@@ -7,7 +7,7 @@
       <img src="bajosmells1.jpeg" alt="Background Image 1" style="width: 50%;" />
       <img src="bajosmells2.jpeg" alt="Background Image 2" style="width: 50%;" />
     </div>
-    <div>
+    <div class="middle-img-container">
       <img class="middle-img" src="bajosmells3.jpeg" alt="Background Image 3" />
     </div>
     <div class="click-text" @click="handleClick">
@@ -73,23 +73,25 @@ export default {
 
 <style scoped>
 .app {
-  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
   height: 100vh;
-  position: relative;
-  margin: 0;
-  padding: 0;
+  padding: 20px 0;
+}
+
+.middle-img-container {
+  width: 50%;
 }
 
 .middle-img {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 2;
-  /* Add width and height as needed */
   width: 50%;
   height: auto;
-  overflow: hidden;
+}
+
+.middle-img-container, .middle-img {
+  pointer-events: none;
 }
 
 .background {
