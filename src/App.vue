@@ -81,6 +81,8 @@ export default {
 }
 
 .middle-img {
+  top: 45%;
+  left: 50%;
   width: 50%;
   height: 50%;
   z-index: 1;
@@ -109,7 +111,7 @@ img {
   color: white;
   padding: 5px 5px;
   font-size: 12px;
-  z-index: 2; /* Set a high z-index to ensure it appears on top of everything else */
+  z-index: 3; /* Set a high z-index to ensure it appears on top of everything else */
   pointer-events: none;
 }
 
@@ -134,7 +136,7 @@ video {
   display: inline-block;
   text-decoration: none;
   padding: 10px 20px;
-  z-index: 1;
+  z-index: 2;
 }
 .form:hover {
   color: white;
@@ -151,7 +153,7 @@ video {
   display: inline-block;
   text-decoration: none;
   padding: 10px 20px;
-  z-index: 1;
+  z-index: 2;
 }
 .twitch-link:hover {
   color: white;
