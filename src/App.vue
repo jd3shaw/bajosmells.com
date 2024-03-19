@@ -5,9 +5,9 @@
     </div>
     <div @click="playVideo" class="background" ref="backgroundElement">
       <img src="bajosmells1.jpeg" alt="Background Image 1" style="width: 50%;" />
-      <img class="middle-img" src="bajosmells3.jpeg" alt="Background Image 3" />
       <img src="bajosmells2.jpeg" alt="Background Image 2" style="width: 50%;" />
     </div>
+    <img class="middle-img" src="bajosmells3.jpeg" alt="Background Image 3" />
     <div class="click-text" @click="handleClick">
       Clickies
     </div>
@@ -87,6 +87,7 @@ export default {
   /* Add width and height as needed */
   width: 50%;
   height: auto;
+  overflow: hidden;
 }
 
 .background {
