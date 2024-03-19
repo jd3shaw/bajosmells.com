@@ -75,9 +75,10 @@ export default {
 .app {
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   height: 100vh;
-  padding: 20px 0;
+  width: 100vw;
+  padding: 0;
 }
 
 .middle-img {
