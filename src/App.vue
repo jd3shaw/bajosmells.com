@@ -7,7 +7,7 @@
       <img src="bajosmells1.jpeg" alt="Background Image 1" style="width: 50%;" />
       <img src="bajosmells2.jpeg" alt="Background Image 2" style="width: 50%;" />
     </div>
-    <div class="middle-img-container">
+    <div>
       <img class="middle-img" src="bajosmells3.jpeg" alt="Background Image 3" />
     </div>
     <div class="click-text" @click="handleClick">
@@ -80,16 +80,10 @@ export default {
   padding: 20px 0;
 }
 
-.middle-img-container {
-  width: 50%;
-}
-
 .middle-img {
   width: 50%;
-  height: auto;
-}
-
-.middle-img-container, .middle-img {
+  height: 50%;
+  z-index: 1;
   pointer-events: none;
 }
 
