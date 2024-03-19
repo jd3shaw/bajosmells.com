@@ -5,6 +5,7 @@
     </div>
     <div @click="playVideo" class="background" ref="backgroundElement">
       <img src="bajosmells1.jpeg" alt="Background Image 1" style="width: 50%;" />
+      <img src="bajosmells3.jpeg" alt="Background Image 3" style="width: 50%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 2;" />
       <img src="bajosmells2.jpeg" alt="Background Image 2" style="width: 50%;" />
     </div>
     <div class="click-text" @click="handleClick">
