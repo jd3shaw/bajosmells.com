@@ -81,11 +81,13 @@ export default {
 }
 
 .middle-img {
-  top: 45%;
+  position: absolute;
+  top: 50%;
   left: 50%;
-  width: 50%;
-  height: 50%;
-  z-index: 1;
+  width: 25%; /* Half the size of the other images */
+  height: auto;
+  transform: translate(-50%, -50%);
+  z-index: 2; /* Higher than the z-index of the other images */
   pointer-events: none;
 }
 
