@@ -15,7 +15,7 @@
       <source src="bajosmells.mp4" type="video/mp4" />
     </video>
     <div>
-      <a class="twitch-link" href="https://www.twitch.tv/bajo" target="_blank">Visit Bajo's Twitch Channel</a>
+      <a class="twitch-link" href="https://www.twitch.tv/bajo" target="_blank">Visit Bajo's Smelly Twitch Channel</a>
     </div>
   </div>
 </template>
