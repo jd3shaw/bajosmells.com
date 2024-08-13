@@ -5,7 +5,7 @@
     </div>
     <div @click="playVideo" class="background" ref="backgroundElement">
       <img src="bajosmells1.png" alt="Background Image 1" style="width: 50%;" />
-      <img src="bajosmells2.png" alt="Background Image 2" style="width: 50%;" />
+      <img src="bajosmells3.jpg" alt="Background Image 2" style="width: 50%;" />
     </div>
     <div class="click-text" @click="handleClick">
       Clickies
