@@ -1,7 +1,7 @@
 <template>
   <div class="app">
     <div>
-      <router-link to="/healsohasworms" class="worms-link">He Also Has Worms</router-link>
+      <a class="twitch-link" href="https://www.twitch.tv/bajo" target="_blank">Visit Bajo's Smelly Twitch Channel</a>
     </div>
     <div @click="playVideo" class="background" ref="backgroundElement">
       <img src="bajosmells1.png" alt="Background Image 1" style="width: 33%;" />
@@ -15,7 +15,7 @@
       <source src="bajosmells.mp4" type="video/mp4" />
     </video>
     <div>
-      <a class="twitch-link" href="https://www.twitch.tv/bajo" target="_blank">Visit Bajo's Smelly Twitch Channel</a>
+      <router-link to="/healsohasworms" class="form">He Also Has Worms</router-link>
     </div>
   </div>
 </template>
@@ -143,7 +143,7 @@ video {
 
 .form {
   position: absolute;
-  top: 0px;
+  bottom: 0px;
   width: 100%;
   text-align: center;
   background: rgba(0, 0, 0, 0.7);
@@ -160,7 +160,7 @@ video {
 
 .twitch-link {
   position: absolute;
-  bottom: 0px;
+  top: 0px;
   width: 100%;
   text-align: center;
   background: rgba(0, 0, 0, 0.7);
