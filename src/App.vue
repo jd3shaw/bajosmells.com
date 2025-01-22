@@ -1,7 +1,7 @@
 <template>
   <div class="app">
     <div>
-      <a class="form" href="https://forms.gle/mGGBKbhvrFb8TJwL7" target="_blank">BajoSmells Shirts Size Form</a>
+      <a class="form" href="https://forms.gle/FV1nwewC7VyRKzf58" target="_blank">BajoSmells Shirts ROI</a>
     </div>
     <div @click="playVideo" class="background" ref="backgroundElement">
       <img src="bajosmells1.png" alt="Background Image 1" style="width: 33%;" />
@@ -16,6 +16,9 @@
     </video>
     <div>
       <a class="twitch-link" href="https://www.twitch.tv/bajo" target="_blank">Visit Bajo's Smelly Twitch Channel</a>
+    </div>
+    <div>
+      <router-link to="/healsohasworms" class="worms-link">He Also Has Worms</router-link>
     </div>
   </div>
 </template>
@@ -172,6 +175,23 @@ video {
   z-index: 1;
 }
 .twitch-link:hover {
+  color: white;
+}
+
+.worms-link {
+  position: absolute;
+  bottom: 50px;
+  width: 100%;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  font-size: 32px;
+  display: inline-block;
+  text-decoration: none;
+  padding: 10px 20px;
+  z-index: 1;
+}
+.worms-link:hover {
   color: white;
 }
 </style>
