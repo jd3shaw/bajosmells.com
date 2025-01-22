@@ -1,7 +1,7 @@
 <template>
   <div class="app">
     <div>
-      <a class="form" href="https://forms.gle/FV1nwewC7VyRKzf58" target="_blank">BajoSmells Shirts ROI</a>
+      <router-link to="/healsohasworms" class="worms-link">He Also Has Worms</router-link>
     </div>
     <div @click="playVideo" class="background" ref="backgroundElement">
       <img src="bajosmells1.png" alt="Background Image 1" style="width: 33%;" />
@@ -16,9 +16,6 @@
     </video>
     <div>
       <a class="twitch-link" href="https://www.twitch.tv/bajo" target="_blank">Visit Bajo's Smelly Twitch Channel</a>
-    </div>
-    <div>
-      <router-link to="/healsohasworms" class="worms-link">He Also Has Worms</router-link>
     </div>
   </div>
 </template>
