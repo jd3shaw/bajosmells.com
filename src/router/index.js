@@ -9,7 +9,7 @@ const routes = [
     component: Home,
   },
   {
-    path: '/he/also/has/worms',
+    path: '/he-also-has-worms',
     name: 'HeAlsoHasWorms',
     component: HeAlsoHasWorms,
   },
