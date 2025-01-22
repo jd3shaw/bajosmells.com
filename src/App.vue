@@ -147,21 +147,4 @@ video {
 .twitch-link:hover {
   color: white;
 }
-
-.worms-link {
-  position: absolute;
-  bottom: 50px;
-  width: 100%;
-  text-align: center;
-  background: rgba(0, 0, 0, 0.7);
-  color: white;
-  font-size: 32px;
-  display: inline-block;
-  text-decoration: none;
-  padding: 10px 20px;
-  z-index: 1;
-}
-.worms-link:hover {
-  color: white;
-}
 </style>
