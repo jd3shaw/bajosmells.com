@@ -15,7 +15,7 @@
       <source src="bajosmells.mp4" type="video/mp4" />
     </video>
     <div>
-      <router-link to="/he/also/has/worms" class="form">He Also Has Worms</router-link>
+      <a href="/he/also/has/worms" class="form">He Also Has Worms</a>
     </div>
   </div>
 </template>
