@@ -15,7 +15,7 @@
       <source src="bajosmells.mp4" type="video/mp4" />
     </video>
     <div>
-      <a class="form" href="/healsohasworms">He Also Has Worms</a>
+      <router-link to="/he/also/has/worms" class="form">He Also Has Worms</router-link>
     </div>
   </div>
 </template>
@@ -68,33 +68,6 @@ export default {
   },
 };
 </script>
-
-<!-- <script>
-export default {
-  data() {
-    return {
-      showVideo: false,
-    };
-  },
-  methods: {
-    playVideo() {
-      this.showVideo = true;
-      const video = this.$refs.videoElement;
-      if (video) {
-        video.play();
-      }
-    },
-    stopVideo() {
-      this.showVideo = false;
-      const video = this.$refs.videoElement;
-      if (video) {
-        video.pause();
-        video.currentTime = 0;
-      }
-    },
-  },
-};
-</script> -->
 
 <style scoped>
 .app {
