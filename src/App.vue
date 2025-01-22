@@ -1,12 +1,12 @@
 <template>
   <div class="app">
     <div>
-      <a class="form" href="https://forms.gle/mGGBKbhvrFb8TJwL7" target="_blank">BajoSmells Shirts Size Form</a>
+      <a class="twitch-link" href="https://www.twitch.tv/bajo" target="_blank">Visit Bajo's Smelly Twitch Channel</a>
     </div>
     <div @click="playVideo" class="background" ref="backgroundElement">
       <img src="bajosmells1.png" alt="Background Image 1" style="width: 33%;" />
       <img src="bajosmells3.jpg" alt="Background Image 3" style="width: 34%;" />
-      <img src="bajosmells2.png" alt="Background Image 2" style="width: 33%;" />
+      <img src="bajosmells2.jpg" alt="Background Image 2" style="width: 33%;" />
     </div>
     <div class="click-text" @click="handleClick">
       Clickies
@@ -15,7 +15,7 @@
       <source src="bajosmells.mp4" type="video/mp4" />
     </video>
     <div>
-      <a class="twitch-link" href="https://www.twitch.tv/bajo" target="_blank">Visit Bajo's Smelly Twitch Channel</a>
+      <a href="/he-also-has-worms" class="form">He Also Has Worms</a>
     </div>
   </div>
 </template>
@@ -69,33 +69,6 @@ export default {
 };
 </script>
 
-<!-- <script>
-export default {
-  data() {
-    return {
-      showVideo: false,
-    };
-  },
-  methods: {
-    playVideo() {
-      this.showVideo = true;
-      const video = this.$refs.videoElement;
-      if (video) {
-        video.play();
-      }
-    },
-    stopVideo() {
-      this.showVideo = false;
-      const video = this.$refs.videoElement;
-      if (video) {
-        video.pause();
-        video.currentTime = 0;
-      }
-    },
-  },
-};
-</script> -->
-
 <style scoped>
 .app {
   width: 100vw;
@@ -143,7 +116,7 @@ video {
 
 .form {
   position: absolute;
-  top: 0px;
+  bottom: 0px;
   width: 100%;
   text-align: center;
   background: rgba(0, 0, 0, 0.7);
@@ -160,7 +133,7 @@ video {
 
 .twitch-link {
   position: absolute;
-  bottom: 0px;
+  top: 0px;
   width: 100%;
   text-align: center;
   background: rgba(0, 0, 0, 0.7);
